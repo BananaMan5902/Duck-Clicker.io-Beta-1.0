@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duck Clicker 🦆</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🦆 DUCK CLICKER 🦆</h1>
+    <p>Build the greatest duck empire ever!</p>
+</header>
+
+<div class="game">
+
+    <section class="duck-area">
+        <div class="stats">
+            <div class="stat">
+                <span>🪙 Duck Coins</span>
+                <strong id="coins">0</strong>
+            </div>
+            <div class="stat">
+                <span>🦆 Ducks Per Second</span>
+                <strong id="perSecond">0</strong>
+            </div>
+            <div class="stat">
+                <span>👆 Coins Per Click</span>
+                <strong id="perClick">1</strong>
+            </div>
+        </div>
+
+        <div class="pond">
+            <div class="cloud cloud1">☁️</div>
+            <div class="cloud cloud2">☁️</div>
+            <div class="pond-decoration">🌿</div>
+
+            <button id="bigDuck" aria-label="Click the duck">
+                🦆
+            </button>
+
+            <div id="floatingText"></div>
+            <div class="water">〰️ 〰️ 〰️ 〰️ 〰️</div>
+        </div>
+
+        <h2>CLICK THE DUCK!</h2>
+        <p class="hint">Every click earns you Duck Coins!</p>
+
+        <div class="button-row">
+            <button id="saveButton" class="small-button">💾 Save Game</button>
+            <button id="resetButton" class="small-button reset">🔄 Reset</button>
+        </div>
+
+        <div class="achievement-box">
+            <h3>🏆 Achievements</h3>
+            <div id="achievements">No achievements yet!</div>
+        </div>
+    </section>
+
+    <section class="shop">
+        <h2>🛒 DUCK SHOP</h2>
+        <p>Buy ducks to build your empire!</p>
+        <div id="shopItems"></div>
+    </section>
+
+</div>
+
+<footer>
+    <p>🦆 Duck Clicker - The Duck Empire Awaits! 🦆</p>
+</footer>
+
+<script src="game.js"></script>
+</body>
+</html>
