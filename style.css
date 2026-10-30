@@ -1,0 +1,281 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #b8edff;
+    color: #35445c;
+    text-align: center;
+}
+
+header {
+    background: #55c7ed;
+    padding: 18px;
+    color: white;
+    border-bottom: 6px solid #329acb;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    text-shadow: 3px 3px #348eb7;
+}
+
+header p {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.game {
+    max-width: 1150px;
+    margin: 25px auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 22px;
+}
+
+.duck-area, .shop {
+    background: #fff8d9;
+    border: 5px solid #f2cf64;
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 7px 0 #d6ac48;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.stat {
+    background: white;
+    border: 3px solid #f2d67e;
+    border-radius: 13px;
+    padding: 10px;
+    min-width: 105px;
+}
+
+.stat span {
+    display: block;
+    font-size: 13px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 21px;
+    color: #d38c19;
+    margin-top: 5px;
+}
+
+.pond {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#8de2ff 0%, #b8f2ff 38%, #54c9dc 39%, #36aabd 100%);
+    border: 5px solid #379cba;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 48px;
+}
+
+.cloud1 {
+    top: 20px;
+    left: 30px;
+}
+
+.cloud2 {
+    top: 40px;
+    right: 35px;
+}
+
+.pond-decoration {
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    font-size: 48px;
+}
+
+.water {
+    position: absolute;
+    bottom: 18px;
+    color: #c3faff;
+    font-size: 25px;
+    width: 100%;
+    pointer-events: none;
+}
+
+#bigDuck {
+    position: relative;
+    z-index: 2;
+    font-size: 125px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.12s;
+    filter: drop-shadow(0 8px 2px #267e99);
+    user-select: none;
+}
+
+#bigDuck:hover {
+    transform: scale(1.1);
+}
+
+#bigDuck:active {
+    transform: scale(0.85);
+}
+
+#floatingText {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px #a66b00;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.hint {
+    color: #8d7541;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.small-button {
+    border: none;
+    background: #65c6ec;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reset {
+    background: #ee8b79;
+}
+
+.small-button:hover {
+    filter: brightness(1.08);
+}
+
+.shop h2 {
+    margin-top: 5px;
+    color: #d18b19;
+}
+
+.shop-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 3px solid #f1d27e;
+    border-radius: 13px;
+    padding: 10px;
+    margin: 10px 0;
+    gap: 10px;
+    text-align: left;
+}
+
+.shop-icon {
+    font-size: 38px;
+    width: 48px;
+    text-align: center;
+}
+
+.shop-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.shop-info strong {
+    display: block;
+    font-size: 16px;
+    color: #bb7d19;
+}
+
+.shop-info span {
+    font-size: 12px;
+    color: #82744f;
+}
+
+.buy-button {
+    background: #72ca72;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 85px;
+}
+
+.buy-button:disabled {
+    background: #b7b7b7;
+    cursor: not-allowed;
+}
+
+.achievement-box {
+    background: #fff0a9;
+    border-radius: 14px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.achievement-box h3 {
+    margin: 5px;
+}
+
+#achievements {
+    font-size: 14px;
+}
+
+.achievement {
+    display: inline-block;
+    background: white;
+    padding: 6px 9px;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 20px;
+    color: #377b9a;
+}
+
+@media(max-width: 750px) {
+    .game {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .pond {
+        height: 260px;
+    }
+
+    #bigDuck {
+        font-size: 105px;
+    }
+}
